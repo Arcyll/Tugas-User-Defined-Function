@@ -6,9 +6,11 @@ const double phi = 3.1416;
 
 double jari2 (double a, double b, double c, double d) {
 	double rad, deltaX, deltaY;
-	
+
+	//menghitung selisih lalu dikuadrat
 	deltaX = pow((b - a), 2);
 	deltaY = pow((d - c), 2);
+	//menghitung akar dari penjumlahan delta
 	rad = sqrt(deltaX+deltaY);
 	
 	return rad;
@@ -16,13 +18,14 @@ double jari2 (double a, double b, double c, double d) {
 
 int main () {
 	double x1, x2, y1, y2;
+	//memasukkan nilai dari variabel
 	cout << "Titik pusat lingkaran: ";
 	cin >> x1 >> y1;
-	cout << "Titik di lingkaran: ";
+	cout << "Titik singgung lingkaran: ";
 	cin >> x2 >> y2;
 	
 	double radius, diameter, keliling, luas;
-	
+
 	radius = jari2 (x1, x2, y1, y2);
 	diameter = radius * 2;
 	keliling = 2 * phi * radius;
@@ -35,3 +38,4 @@ int main () {
 		
 	return 0;	
 }
+
